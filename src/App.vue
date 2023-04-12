@@ -1,5 +1,5 @@
 <template>
-  <div id="App">
+  <div class="app" id="App">
     <Header />
   </div>
 </template>
@@ -17,4 +17,8 @@ export default {
 </script>
 
 <style>
+.app{
+  background-color:#F6F3F3;
+  height: 100%;
+}
 </style>
