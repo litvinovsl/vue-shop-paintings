@@ -1,6 +1,10 @@
 <template>
     <section className="elements">
-        <Card v-for="product in products" :key="product.id" :product_data="product" />
+        <Card v-for="product in products" 
+        :key="product.id" 
+        :product_data="product" 
+        @sendIdProduct = "showIdCardOnClick"
+        />
     </section>
 </template>
 
@@ -17,36 +21,40 @@ export default {
         {
           image: "venera.png",
           name: "«Рождение Венеры» Сандро Боттичелли",
-          oldprice: 3000000,
-          newprice: 2000000,
+          oldprice: "3 000 000",
+          newprice: "2 000 000",
           availability: true,
           id: 1
         },
         {
           image: "vechere.png",
           name: "«Тайная вечеря»  Леонардо да Винчи",
-          oldprice: 4000000,
-          newprice: 3500000,
+          newprice: "3 500 000",
           availability: true,
           id: 2
         },
         {
           image: "adam.png",
           name: "«Сотворение Адама» Микеланджело",
-          oldprice: 800000,
-          newprice: 700000,
+          oldprice: "800 000",
+          newprice: "700 000",
           availability: true,
           id: 3
         },
         {
           image: "urok.png",
           name: "«Урок анатомии»  Рембрандт",
-          oldprice: 30000000,
-          newprice: 28000000,
+          oldprice: "30 000 000",
+          newprice: "28 000 000",
           availability: false,
           id: 4
         },
       ]
+    }
+  },
+  methods: {
+    showIdCardOnClick(data){
+        console.log(data)
     }
   }
 }
@@ -60,7 +68,6 @@ export default {
   grid-gap: 58px 32px;
   color: black;
   align-content: center;
-  min-height: 40vh;
   justify-content: center;
 }
 </style>

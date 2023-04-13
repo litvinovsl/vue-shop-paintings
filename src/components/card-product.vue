@@ -1,14 +1,19 @@
 <template>
-  <div class="card">
+  <div :class="product_data.availability ? 'card' : 'card card_overlay'">
     <img class="card__img" :src="require('../images/' + product_data.image)" alt='#'>
     <h3 class="card__title">{{product_data.name}}</h3>
-    <div class="card__price-conteiner">
-      <div class="">
-        <p class="card__price card__old-price">{{product_data.oldprice}} $</p>
+    <div v-if="product_data.availability" class="card__price-conteiner">
+      <div class="card__price-all">
+        <p v-show="product_data.oldprice" class="card__price card__old-price">{{product_data.oldprice}} $</p>
         <p class="card__price card__new-price">{{product_data.newprice}} $</p>
       </div>
-      <button class="card__add">Купить</button>
+      <button v-if="isBtnActive" class="card__add" @click="addProduct">Купить</button>
+      <button v-else class="card__add card__add_added" @click="addProduct">
+        <img src="../images/add.svg">
+        <p class="card__btn-text">В корзине</p>
+      </button>
     </div>
+    <p v-else class="card_no-price">Продана на аукционе</p>
   </div>
 </template>
   
@@ -24,9 +29,17 @@ export default {
     }
   },
   data(){
-    return{}
+    return{
+      isBtnActive: true
+    }
   },
-  components: {}
+  components: {},
+  methods: {
+    addProduct(){
+      this.isBtnActive = !this.isBtnActive;
+      this.$emit('sendIdProduct', this.product_data.id);
+    }
+  }
 }
 
 // console.log(product_data);
@@ -38,6 +51,10 @@ export default {
   border: 1px solid #E1E1E1;
   width: 278px;
   height: 326px;
+  position: relative;
+}
+.card_overlay{
+  opacity: .5;
 }
 
 .card__title {
@@ -59,9 +76,22 @@ export default {
   margin: 0 auto;
 }
 
+.card_no-price{
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 24px;
+  width: calc(100% - 48px);
+}
+
 .card__price {
   margin: 0;
   font-family: 'Merriweather';
+}
+
+.card__price-all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card__old-price{
@@ -85,5 +115,21 @@ export default {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
+}
+
+.card__add_added{
+  display: flex;
+  flex-direction: row;
+  background-color: #5B3A32;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding-left: 11px;
+  gap: 7.2px
+}
+
+.card__btn-text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
 }
 </style>
