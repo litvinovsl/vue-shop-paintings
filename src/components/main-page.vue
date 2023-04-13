@@ -19,7 +19,11 @@ export default {
   
 <style>
 .main-page {
-  padding: 45px 352px 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0 320px;
+  width: 1220px;
+  margin: 0 auto;
 }
 
 .main-page__h {
