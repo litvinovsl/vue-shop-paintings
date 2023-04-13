@@ -19,7 +19,7 @@ export default {
 }
 
 .search-form__input {
-    width: 410px;
+    width: 294px;
     height: 48px;
     border: 1px solid #E1E1E1;
     background-color: #F6F3F3;

@@ -20,6 +20,7 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 48px;
+    padding: 0;
 }
 
 .header-link{

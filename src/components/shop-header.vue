@@ -30,6 +30,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
+    /* padding: 0 352px; */
     max-width: 1120px;
     height: 100%;
     align-items: center;

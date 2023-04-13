@@ -19,9 +19,7 @@ export default {
   
 <style>
 .main-page {
-  padding-left: 352px;
-  padding-right: 352px;
-  padding-bottom: 100px;
+  padding: 45px 352px 320px;
 }
 
 .main-page__h {
@@ -29,6 +27,7 @@ export default {
   line-height: 150%;
   font-weight: 700;
   color: #343030;
-  margin-bottom: 30px;
+  margin: 0 0 39px;
+
 }
 </style>

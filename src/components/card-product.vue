@@ -23,16 +23,17 @@ export default {
 <style>
 .card {
   border: 1px solid #E1E1E1;
-  width: 280px;
-  height: 328px;
+  width: 278px;
+  height: 326px;
 }
 
 .card__title {
   margin-left: 24px;
   margin-bottom: 22px;
   width: 220px;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 27px;
   color: #343030;
 }
 
@@ -47,6 +48,20 @@ export default {
 
 .card__price {
   margin: 0;
+  font-family: 'Merriweather';
+}
+
+.card__old-price{
+  color: #A0A0A0;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: line-through;
+  font-weight: 300;
+}
+.card__new-price{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .card__add {
