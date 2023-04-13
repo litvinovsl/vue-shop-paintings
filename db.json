@@ -4,37 +4,43 @@
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Рождение Венеры» Сандро Боттичелли",
             "old-prise": 3000000,
-            "new-price": 2000000
+            "new-price": 2000000,
+            "id": 1
         },
         {
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Тайная вечеря»  Леонардо да Винчи",
             "old-prise": 4000000,
-            "new-price": 3500000
+            "new-price": 3500000,
+            "id": 2
         },
         {
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Сотворение Адама» Микеланджело",
             "old-prise": 800000,
-            "new-price": 700000
+            "new-price": 700000,
+            "id": 3
         },
         {
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Урок анатомии»  Рембрандт",
             "old-prise": 30000000,
-            "new-price": 28000000
+            "new-price": 28000000,
+            "id": 4
         },
         {
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Тайная вечеря»  Леонардо да Винчи",
             "old-prise": 2000000,
-            "new-price": 1000000
+            "new-price": 1000000,
+            "id": 5
         },
         {
             "image": "https://i1.stat01.com/1/9067/90661119/afacdb/tajnaya-vecherya-ikona-na-dereve.jpg",
             "name": "«Урок анатомии»  Рембрандт",
             "old-prise": 10000000,
-            "new-price": 500000
+            "new-price": 500000,
+            "id": 6
         }
     ]
 }
