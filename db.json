@@ -5,6 +5,7 @@
             "name": "«Рождение Венеры» Сандро Боттичелли",
             "old-prise": 3000000,
             "new-price": 2000000,
+            "availability": true,
             "id": 1
         },
         {
@@ -12,6 +13,7 @@
             "name": "«Тайная вечеря»  Леонардо да Винчи",
             "old-prise": 4000000,
             "new-price": 3500000,
+            "availability": true,
             "id": 2
         },
         {
@@ -19,6 +21,7 @@
             "name": "«Сотворение Адама» Микеланджело",
             "old-prise": 800000,
             "new-price": 700000,
+            "availability": true,
             "id": 3
         },
         {
@@ -26,6 +29,7 @@
             "name": "«Урок анатомии»  Рембрандт",
             "old-prise": 30000000,
             "new-price": 28000000,
+            "availability": false,
             "id": 4
         },
         {
@@ -33,6 +37,7 @@
             "name": "«Тайная вечеря»  Леонардо да Винчи",
             "old-prise": 2000000,
             "new-price": 1000000,
+            "availability": true,
             "id": 5
         },
         {
@@ -40,6 +45,7 @@
             "name": "«Урок анатомии»  Рембрандт",
             "old-prise": 10000000,
             "new-price": 500000,
+            "availability": true,
             "id": 6
         }
     ]
