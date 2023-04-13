@@ -25,7 +25,7 @@ export default {
     border-bottom: 1px solid #E1E1E1;
 }
 
-.header__box{
+.header__box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,5 +34,18 @@ export default {
     max-width: 1120px;
     height: 100%;
     align-items: center;
+}
+
+@media screen and (max-width: 1240px) {
+    .header__box {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .header__box {
+        flex-direction: column;
+        max-width: 900px;
+    }
 }
 </style>

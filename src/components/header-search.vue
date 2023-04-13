@@ -44,4 +44,10 @@ export default {
     font-size: 14px;
     line-height: 150%;
 }
+
+@media screen and (max-width: 1240px) {
+    .search-form__input{
+      max-width: 214px;
+    }
+}
 </style>

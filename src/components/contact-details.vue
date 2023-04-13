@@ -42,4 +42,20 @@ export default {
     font-size: 14px;
     line-height: 150%;
 }
+
+@media screen and (max-width: 920px) {
+    .contacts {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .contact__info {
+        font-size: 10px;
+        line-height: 150%;
+    }
+    .contacts{
+        gap: 30px;
+    }
+}
 </style>

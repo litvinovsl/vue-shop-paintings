@@ -34,4 +34,10 @@ export default {
     height: 100%;
     align-items: center;
 }
+
+@media screen and (max-width: 920px) {
+    .footer__box{
+      flex-direction: column;
+    }
+}
 </style>
