@@ -1,11 +1,11 @@
 <template>
   <div class="card">
-    <img class="card__img" src="../images/painting-63186_12801.png" alt="#">
-    <h3 class="card__title">«Рождение Венеры» Сандро Боттичелли</h3>
+    <img class="card__img" :src="require('../images/' + product_data.image)" alt='#'>
+    <h3 class="card__title">{{product_data.name}}</h3>
     <div class="card__price-conteiner">
       <div class="">
-        <p class="card__price card__old-price">2 000 000 $</p>
-        <p class="card__price card__new-price">1 000 000 $</p>
+        <p class="card__price card__old-price">{{product_data.oldprice}} $</p>
+        <p class="card__price card__new-price">{{product_data.newprice}} $</p>
       </div>
       <button class="card__add">Купить</button>
     </div>
@@ -14,10 +14,23 @@
   
 <script>
 
+
 export default {
   name: 'card-product',
+  props: {
+    product_data:{
+      type: Object,
+      default() {return {}},
+    }
+  },
+  data(){
+    return{}
+  },
   components: {}
 }
+
+// console.log(product_data);
+
 </script>
   
 <style>

@@ -1,16 +1,7 @@
 <template>
   <div class="main-page">
     <h2 class="main-page__h">Картины эпохи Возрождения</h2>
-    <section className="elements">
     <Cards />
-    <Cards />
-    <Cards />
-    <Cards />
-    <Cards />
-    <Cards />
-    </section>
-    
-
   </div>
 </template>
   
@@ -22,21 +13,12 @@ export default {
   name: 'main-page',
   components: {
     Cards,
-  }
+  },
 }
 </script>
   
 <style>
-.elements{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 58px 32px;
-    color: black;
-    align-content: center;
-    min-height: 40vh;
-    justify-content: center;
-}
+
 
 .main-page {
   display: flex;
