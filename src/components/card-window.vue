@@ -21,7 +21,7 @@
             <img class="popup__image" src="../images/adam.png" alt="картинка" />
             <p class="popup__img-description">ddd</p> -->
         </div>
-        <div className="popup__overlay"></div>
+        <div className="popup__overlay" @click="closePopup"></div>
     </section>
 </template>
 
