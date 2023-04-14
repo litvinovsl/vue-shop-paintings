@@ -2,6 +2,7 @@
   <div class="main-page">
     <h2 class="main-page__h">Картины эпохи Возрождения</h2>
     <Cards />
+    
   </div>
 </template>
   

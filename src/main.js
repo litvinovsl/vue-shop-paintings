@@ -1,11 +1,22 @@
-import { createApp } from 'vue'
-// import Vue, { createApp } from 'vue'
+import 
+    // Vue , 
+{   createApp} 
+from 'vue'
 import App from './App.vue'
-import store from './vuex/store'
+import store from './store';
 
-// createApp(App).mount('#app')
+const app = createApp(App)
 
-createApp(App,{
-    store
+app.use(store);
+app.mount('#app');
+// Vue.config.prodactionTip = false;
+
+// new Vue({
+//     // store,
+//     render: h => h(App)
+// }).$maunt('#App')
+
+// createApp(App,{
+//     store
         
-  }).mount('#app')
+//   }).mount('#app')

@@ -1,6 +1,7 @@
 <template>
     <section className="elements">
-        <Card v-for="product in products" 
+        <Card 
+        v-for="product in products" 
         :key="product.id" 
         :product_data="product" 
         @sendIdProduct = "showIdCardOnClick"

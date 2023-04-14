@@ -1,13 +1,25 @@
 <template>
     <form class="search-form">
-        <input class="search-form__input" type="text" placeholder="Поиск по названию картины">
-        <button class="search-form__button" type="submit">Найти</button>
+        <input class="search-form__input" v-model="searchCard" type="text" placeholder="Поиск по названию картины">
+        <button class="search-form__button" type="button">Найти </button>
     </form>
 </template>
 
 <script>
 export default {
-    name: 'header-search'
+    name: 'header-search',
+    data(){
+        return{
+            searchCard: ''
+        }
+    },
+    computed: {
+        // filteredCard(){
+        //     return this.products.filter(product => {
+        //         return product.indexOf(this.searchCard) !== -1
+        //     })
+        // }
+    }
 }
 </script>
 
