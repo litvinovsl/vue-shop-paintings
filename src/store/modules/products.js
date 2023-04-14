@@ -10,7 +10,7 @@ export default {
 
       return state.filteredProducts = state.products.filter(product => {
         // console.log(product)
-        return product.name.indexOf(searchText) !== -1
+        return product.name.toUpperCase().indexOf(searchText.toUpperCase()) !== -1
       })
     },
   },
