@@ -19,7 +19,6 @@
   
 <script>
 
-
 export default {
   name: 'card-product',
   props: {
@@ -33,7 +32,8 @@ export default {
       isBtnActive: true
     }
   },
-  components: {},
+  components: {
+  },
   methods: {
     addProduct(){
       this.isBtnActive = !this.isBtnActive;

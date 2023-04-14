@@ -1,17 +1,22 @@
 <template>
     <section className="elements">
-        <Card v-for="product in allProducts" :key="product.id" :product_data="product"
-            @sendIdProduct="showIdCardOnClick" />
+        <Card v-for="product in allProducts" :key="product.id" :product_data="product" @sendIdProduct="showIdCardOnClick" />
+        <CardWindow />
+
     </section>
 </template>
 
 <script>
 import Card from './card-product.vue'
 import { mapGetters } from 'vuex'
+import CardWindow from './card-window.vue'
+
 export default {
     name: "cards-product",
     components: {
-        Card
+        Card,
+        CardWindow
+
     },
     computed: mapGetters(['allProducts']),
     methods: {
