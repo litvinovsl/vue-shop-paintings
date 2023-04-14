@@ -1,7 +1,7 @@
 <template>
     <form class="search-form">
         <input class="search-form__input" v-model="searchCard" type="text" placeholder="Поиск по названию картины">
-        <button class="search-form__button" type="button">Найти </button>
+        <button class="search-form__button" v-on:click="getFilteredText" type="button">Найти </button>
     </form>
 </template>
 
@@ -14,11 +14,9 @@ export default {
         }
     },
     computed: {
-        // filteredCard(){
-        //     return this.products.filter(product => {
-        //         return product.indexOf(this.searchCard) !== -1
-        //     })
-        // }
+        getFilteredText(){
+            return this.$store.commit('getFilteredText', this.searchCard)
+        }
     }
 }
 </script>

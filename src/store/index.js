@@ -1,11 +1,11 @@
 import { createStore } from 'vuex'
+import products from './modules/products'
 
 const store = createStore({
-    state () {
-      return {
-        count: 0
-      }
-    }
+    modules: {
+        products
+    },
+    
   })
 
   export default store
