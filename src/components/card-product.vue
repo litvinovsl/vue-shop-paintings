@@ -79,7 +79,14 @@ export default {
   font-size: 18px;
   line-height: 27px;
   color: #343030;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
 }
+.card__title:hover {
+    color: #1b1818;
+    border-bottom: 1px solid #000;
+}
+
 
 .card__price-conteiner {
   display: flex;
