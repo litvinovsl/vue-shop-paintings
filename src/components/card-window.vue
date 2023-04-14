@@ -13,20 +13,39 @@
 
     <section class="popup popup_opened">
         <div class="popup__open-place">
-            <button type="button" class="popup__button-close">
+            <button type="button" @click="closePopup" class="popup__button-close">
                 <img class="popup__button-close-img" src="../images/Close.svg" alt="Закрыть" />
             </button>
-            <h2 class="popup__img-name">«Сотворение Адама» Микеланджело"</h2>
+            <slot></slot>
+            <!-- <h2 class="popup__img-name">ddd</h2>
             <img class="popup__image" src="../images/adam.png" alt="картинка" />
-            <p class="popup__img-description">картина итальянского художника тосканской школы Сандро Боттичелли.
-                Представляет собой живопись темперой на холсте размером 172,5 × 278,5 см. В настоящее время хранится в
-                галерее Уффици, Флоренция.</p>
+            <p class="popup__img-description">ddd</p> -->
         </div>
         <div className="popup__overlay"></div>
     </section>
 </template>
 
-<script></script>
+<script>
+
+export default {
+  name: 'card-window',
+  props: {
+    product_data:{
+      type: Object,
+      default() {return {}},
+    }
+  },
+  data(){
+    return{
+    }
+  },
+  methods: {
+    closePopup(){
+        this.$emit('closePopup')
+    }
+  }
+}
+</script>
 
 <style>
 .popup {
@@ -59,6 +78,7 @@
     opacity: 1;
     transition-delay: 0s, 0s;
     height: 100%;
+    z-index: 3;
 }
 
 .popup__button-close {
