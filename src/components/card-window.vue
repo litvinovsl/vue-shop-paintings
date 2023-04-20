@@ -99,15 +99,6 @@ export default {
 
 }
 
-@media screen and (max-width: 600px) {
-    .popup__button-close {
-        width: 20px;
-        height: 20px;
-        right: 0px;
-        top: -36px;
-    }
-}
-
 .popup__button-close-img {
     width: 32px;
     height: 32px;
@@ -164,4 +155,40 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-}</style>
+}
+@media screen and (max-width: 620px) {
+    .popup__img-description{
+       max-width: calc(100% - 30px);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .popup__button-close {
+        width: 20px;
+        height: 20px;
+        right: 0px;
+        top: -36px;
+    }
+
+}
+
+@media screen and (max-width: 505px) {
+    .popup__img-name{
+       font-size: 14px;
+       max-width: calc(100% - 30px);
+    }
+    .popup__img-conteiner{
+    max-height: 320px;
+    max-width: 400px;
+    }
+
+}
+@media screen and (max-width: 405px) {
+    .popup__img-conteiner{
+    max-height: 230px;
+    max-width: 320px;
+    }
+
+}
+</style>
