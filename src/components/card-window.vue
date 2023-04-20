@@ -131,6 +131,7 @@ export default {
     max-width: 500px;
     overflow: hidden;
     margin: 0 auto;
+    position: relative;
 }
 
 .popup__img-carousel{
@@ -138,6 +139,26 @@ export default {
     transition: all ease .2s;
 }
 
+.popup__button{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    background-color:transparent;
+    border: none;
+    transition: background-color .5s ease-in-out;
+}
+
+.popup__button:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.popup__button_next{
+    right: 0;
+}
+.popup__button_pred{
+    left: 0;
+}
 .popup__overlay {
     position: absolute;
     width: 100%;
