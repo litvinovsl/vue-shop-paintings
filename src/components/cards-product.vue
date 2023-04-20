@@ -1,6 +1,7 @@
 <template>
     <section className="elements">
-        <Card v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider" :intervalSlider="10000" />
+        <Card v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider"
+            :intervalSlider="10000" />
     </section>
 </template>
 
@@ -27,14 +28,11 @@ export default {
     grid-gap: 58px 32px;
     color: black;
     align-content: center;
-    /* justify-content: center; */
     margin: 0 auto;
 }
 
 @media screen and (max-width: 1240px) {
     .elements {
-        /* margin-top: 80px; */
-        /* grid-template-columns: repeat(auto-fill, minmax(278px,278px)); */
         grid-template-columns: repeat(3, 278px);
         grid-gap: 45px 29px;
         margin-bottom: 10px;
