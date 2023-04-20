@@ -17,13 +17,23 @@
   </div>
   <CardWindow v-if="isPopupVisible" @closePopup="closePopup">
     <h2 class="popup__img-name">{{ product_data.name }}</h2>
-    <img class="popup__image" :src="require('../images/' + product_data.image)" alt="картинка" />
+    <div class="popup__img-conteiner">
+      <div class="popup__img-carousel" :style="{'margin-left': '-' + (100 * carrentSlideIndex) + '%'}">
+        <CardItem v-for="item in carusel_data" :key="item.id" :img_data="item" />
+      </div>
+    </div>
+    <button class="cd" @click="predSlide" type="button">pred</button>
+    <button class="cd" @click="nextSlide" type="button">next</button>
+
+
+
     <p class="popup__img-description">{{ product_data.description }}</p>
   </CardWindow>
 </template>
   
 <script>
 import CardWindow from './card-window.vue'
+import CardItem from './card-window-img-item.vue'
 
 export default {
   name: 'card-product',
@@ -31,16 +41,27 @@ export default {
     product_data: {
       type: Object,
       default() { return {} },
+    },
+    carusel_data: {
+      type: Array,
+      default: () => []
+    },
+    intervalSlider:{
+      type: Number,
+      default: 0
     }
   },
   data() {
     return {
       isBtnActive: true,
-      isPopupVisible: false
+      isPopupVisible: false,
+      carrentSlideIndex: 0
     }
   },
   components: {
-    CardWindow
+    CardWindow,
+    CardItem
+
   },
   methods: {
     closePopup() {
@@ -50,7 +71,29 @@ export default {
       this.isPopupVisible = true;
       this.$emit('sendProduct', this.product_data);
     },
-    
+    predSlide(){
+      if (this.carrentSlideIndex > 0){
+        this.carrentSlideIndex--
+      console.log(this.carrentSlideIndex)
+
+      }
+    },
+    nextSlide(){
+      if (this.carrentSlideIndex >= this.carusel_data.length - 1){
+        this.carrentSlideIndex = 0
+      } else {
+        this.carrentSlideIndex++
+      console.log(this.carrentSlideIndex)
+      }
+    }
+  },
+  mounted(){
+    if(this.intervalSlider > 0) {
+      let vm = this;
+      setInterval(function(){
+        vm.nextSlide()
+      }, vm.intervalSlider)
+    }
   }
 }
 
@@ -82,9 +125,10 @@ export default {
   transition: opacity .3s ease-in-out;
   cursor: pointer;
 }
+
 .card__title:hover {
-    color: #1b1818;
-    border-bottom: 1px solid #000;
+  color: #1b1818;
+  border-bottom: 1px solid #000;
 }
 
 

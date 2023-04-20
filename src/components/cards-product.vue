@@ -1,6 +1,6 @@
 <template>
     <section className="elements">
-        <Card v-for="product in allProducts" :key="product.id" :product_data="product" />
+        <Card v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider" :intervalSlider="2000" />
     </section>
 </template>
 

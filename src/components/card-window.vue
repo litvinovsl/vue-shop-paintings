@@ -1,25 +1,10 @@
 <template>
-    <!-- <section class="popup popup_opened">
-        <div class="popup__container">
-            <button type="button" class="popup__button-close">
-                <img class="popup__button-close-img" src="../images/Close.svg" alt="Закрыть" />
-            </button>
-            <img class="success" src="../images/dde.png" alt="успешно" />
-            <p class="success-text">«Рождение Венеры» Сандро Боттичелли"</p>
-            <p>картина итальянского художника тосканской школы Сандро Боттичелли. Представляет собой живопись темперой на холсте размером 172,5 × 278,5 см. В настоящее время хранится в галерее Уффици, Флоренция.</p>
-        </div>
-        <div class="popup__overlay"></div>
-    </section> -->
-
     <section class="popup popup_opened">
         <div class="popup__open-place">
             <button type="button" @click="closePopup" class="popup__button-close">
                 <img class="popup__button-close-img" src="../images/Close.svg" alt="Закрыть" />
             </button>
             <slot></slot>
-            <!-- <h2 class="popup__img-name">ddd</h2>
-            <img class="popup__image" src="../images/adam.png" alt="картинка" />
-            <p class="popup__img-description">ddd</p> -->
         </div>
         <div className="popup__overlay" @click="closePopup"></div>
     </section>
@@ -29,12 +14,6 @@
 
 export default {
   name: 'card-window',
-  props: {
-    product_data:{
-      type: Object,
-      default() {return {}},
-    }
-  },
   data(){
     return{
     }
@@ -145,6 +124,18 @@ export default {
         width: 20px;
         height: 20px;
     }
+}
+
+.popup__img-conteiner{
+    max-height: 400px;
+    max-width: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.popup__img-carousel{
+    display: flex;
+    transition: all ease .2s;
 }
 
 .popup__overlay {

@@ -21,6 +21,11 @@ export default {
       filteredProducts: [
         {
           image: "venera.png",
+          slider: [
+            {img: "venera-1.jpeg", id: "img-1"},
+            {img: "venera-2.jpeg", id: "img-2"},
+            {img: "venera-3.jpg", id: "img-3"},
+          ],
           name: "«Рождение Венеры» Сандро Боттичелли",
           oldprice: "3 000 000",
           newprice: "2 000 000",
@@ -30,6 +35,10 @@ export default {
         },
         {
           image: "vechere.png",
+          slider: [
+            {img: "vechere-1.jpeg", id: "img-4"},
+            {img: "vechere-2.jpeg", id: "img-5"},
+          ],
           name: "«Тайная вечеря»  Леонардо да Винчи",
           newprice: "3 500 000",
           description: "Монументальная роспись работы Леонардо да Винчи, изображающая сцену последней трапезы Христа со своими учениками. Создана в 1495—1498 годы в доминиканском монастыре Санта-Мария-делле-Грацие в Милане. Ранее ошибочно называлась фреской, однако было установлено, что роспись выполнена не фреской, и не «а-секко», а в особой технике, придуманной художником: яичной темперой по масляному грунту из свинцовых белил.",
@@ -38,6 +47,11 @@ export default {
         },
         {
           image: "adam.png",
+          slider: [
+            {img: "adam-1.jpeg", id: "img-6"},
+            {img: "adam-2.jpeg", id: "img-7"},
+            {img: "adam-3.jpeg", id: "img-8"},
+          ],
           name: "«Сотворение Адама» Микеланджело",
           oldprice: "800 000",
           newprice: "700 000",
@@ -47,6 +61,11 @@ export default {
         },
         {
           image: "urok.png",
+          slider: [
+            {img: "urok-1.jpeg", id: "img-9"},
+            {img: "urok-2.jpeg", id: "img-10"},
+            {img: "urok-3.jpeg", id: "img-11"},
+          ],
           name: "«Урок анатомии»  Рембрандт",
           oldprice: "30 000 000",
           newprice: "28 000 000",

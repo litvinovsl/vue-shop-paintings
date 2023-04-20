@@ -8,7 +8,7 @@
 //   import CartItem from './cards-product.vue';
   
   export default {
-    name: 'main-page',
+    name: 'cart',
     components: {
       Cards,
     },
