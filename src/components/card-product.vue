@@ -8,7 +8,7 @@
         <p class="card__price card__new-price">{{ product_data.newprice }} $</p>
       </div>
       <button v-if="isBtnActive" class="card__add" @click="addProduct">Купить</button>
-      <button v-else class="card__add card__add_added" @click="prewProduct">
+      <button v-else class="card__add card__add_added" @click="addProduct">
         <img src="../images/add.svg">
         <p class="card__btn-text">В корзине</p>
       </button>
@@ -65,6 +65,9 @@ export default {
     closePopup() {
       this.isPopupVisible = false;
       this.carrentSlideIndex = 0
+    },
+    addProduct(){
+      this.isBtnActive = !this.isBtnActive
     },
     prewProduct() {
       this.isPopupVisible = true;
@@ -176,6 +179,12 @@ export default {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
+  cursor: pointer;
+  transition: font-size ease-in-out .3s;
+}
+
+.card__add:hover{
+  font-size: 15px;
 }
 
 .card__add_added {
@@ -183,7 +192,6 @@ export default {
   flex-direction: row;
   background-color: #5B3A32;
   align-items: center;
-  /* justify-content: space-between; */
   padding-left: 11px;
   gap: 7.2px
 }
