@@ -1,7 +1,11 @@
 <template>
-    <section className="elements">
-        <Card v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider"
-            :intervalSlider="10000" />
+    <section v-if="this.$router.currentRoute._value.path === '/'" @click="test" className="elements">
+        <Card  v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider" :intervalSlider="10000" />
+        <!-- <Card v-else  /> -->
+    </section>
+    <section v-else  className="elements">
+        <Card  v-for="product in allCardOnCart" :key="product.id" :product_data="product" :carusel_data="product.slider" :intervalSlider="10000" />
+
     </section>
 </template>
 
@@ -14,8 +18,27 @@ export default {
     components: {
         Card,
     },
-    computed: mapGetters(['allProducts']),
+    data() {
+        return{
+            // isMainPage: false,
+        }
+    },
+    computed: mapGetters([['allProducts'], ['allCardOnCart']])
+    ,
+    // computed: mapGetters(['allCardOnCart']),
+
     methods: {
+        isMainPage(){
+
+            // console.log('ddd')
+            // console.log(this.$router.currentRoute._value.path === '/')
+            return this.$router.currentRoute._value.path === '/'
+        },
+        test(){
+            console.log('CardOnCart', this.allCardOnCart)
+            console.log('Products', this.allProducts)
+
+        }
     }
 }
 </script>

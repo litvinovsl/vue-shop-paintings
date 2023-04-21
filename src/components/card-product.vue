@@ -8,7 +8,7 @@
         <p class="card__price card__new-price">{{ product_data.newprice }} $</p>
       </div>
       <button v-if="isBtnActive" class="card__add" @click="[addProduct(), getCardData]">Купить</button>
-      <button v-else class="card__add card__add_added" @click="addProduct">
+      <button v-else class="card__add card__add_added">
         <img src="../images/add.svg">
         <p class="card__btn-text">В корзине</p>
       </button>

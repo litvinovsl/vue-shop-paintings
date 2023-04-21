@@ -18,6 +18,7 @@ export default {
     getCardData(state, cartProducts){
       // console.log('tyt v products.js')
       // state.cartProducts = cartProducts;
+      // console.log('router: ', $router.name)
       state.cartProducts.push(cartProducts)
       console.log('state.cartProducts: ', state.cartProducts)
     }
@@ -145,7 +146,7 @@ export default {
     allProducts(state) {
       return state.filteredProducts
     },
-    addCardOnCart(state) {
+    allCardOnCart(state) {
       return state.cartProducts
     }
   }

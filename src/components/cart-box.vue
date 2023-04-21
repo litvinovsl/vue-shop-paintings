@@ -1,18 +1,18 @@
 <template>
     <div class="cart-box">
       <h2 class="cart-box__h">Корзина товаров</h2>
-      <!-- <Cards /> -->
+      <Cards />
     </div>
   </template>
     
   <script>
   
-  // import Cards from './cards-product.vue';
+  import Cards from './cards-product.vue';
   
   export default {
     name: 'cart-box',
     components: {
-      // Cards,
+      Cards,
     },
   }
   </script>
