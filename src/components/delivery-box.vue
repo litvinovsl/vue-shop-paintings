@@ -1,18 +1,15 @@
 <template>
-    <div class="cart-box">
-      <h2 class="cart-box__h">Корзина товаров</h2>
-      <!-- <Cards /> -->
+    <div class="delivery-box">
+      <h2 class="delivery-box__h">Доставка</h2>
     </div>
   </template>
     
   <script>
   
-  // import Cards from './cards-product.vue';
   
   export default {
-    name: 'cart-box',
+    name: 'delivery-box',
     components: {
-      // Cards,
     },
   }
   </script>
@@ -20,7 +17,7 @@
   <style>
   
   
-  .cart-box {
+  .delivery-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +27,7 @@
     margin: 0 auto;
   }
   
-  .cart-box__h {
+  .delivery-box__h {
     font-size: 24px;
     align-self: start;
     line-height: 150%;
@@ -40,17 +37,17 @@
   }
   
   @media screen and (max-width: 1240px) {
-      .cart-box{
+      .delivery-box{
         max-width: 900px;
       }
   }
   @media screen and (max-width: 920px) {
-      .cart-box{
+      .delivery-box{
         max-width: 590px;
       }
   }
   @media screen and (max-width: 600px) {
-      .cart-box{
+      .delivery-box{
         max-width: 280px;
         padding-bottom: 50px;
       }
