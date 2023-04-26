@@ -7,7 +7,7 @@
         <p v-show="product_data.oldprice" class="card__price card__old-price">{{ product_data.oldprice }} $</p>
         <p class="card__price card__new-price">{{ product_data.newprice }} $</p>
       </div>
-      <button v-if="isBtnActive" class="card__add" @click="[addProduct(), getCardData]">Купить</button>
+      <button v-if="!product_data.isLiked" class="card__add" @click="[addProduct(), getCardData]">Купить</button>
       <button v-else class="card__add card__add_added">
         <img src="../images/add.svg">
         <p class="card__btn-text">В корзине</p>
@@ -33,12 +33,11 @@
 <script>
 import CardWindow from './card-window.vue'
 import CardItem from './card-window-img-item.vue'
-// import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 
 export default {
   name: 'card-product',
-  // computed: mapGetters(['addCardOnCart']),
   props: {
     product_data: {
       type: Object,
@@ -67,10 +66,9 @@ export default {
   },
   computed: {
     getCardData() {
-      console.log("добавил")
-      // this.addDataOnCart = this.product_data
       return this.$store.commit('getCardData', this.addDataOnCart)
-    }
+    },
+    ...mapGetters(['isButtonAddActive'])
   },
   methods: {
     closePopup() {
@@ -78,8 +76,6 @@ export default {
       this.carrentSlideIndex = 0
     },
     addProduct() {
-      console.log("добавил2")
-      this.isBtnActive = !this.isBtnActive;
       this.addDataOnCart = this.product_data
     },
     prewProduct() {
