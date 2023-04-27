@@ -4,6 +4,8 @@
 
 https://litvinovsl.github.io/vue-shop-paintings/
 
++ функционал добавления/удаления товаров в корзину
+
 ## Project setup
 ```
 npm install
