@@ -7,9 +7,8 @@
         <p v-show="product_data.oldprice" class="card__price card__old-price">{{ product_data.oldprice }} $</p>
         <p class="card__price card__new-price">{{ product_data.newprice }} $</p>
       </div>
-      <!-- <button @click="deliteProduct">i++</button> -->
-      <button v-if="!product_data.isLiked" class="card__add" @click="[addProduct(), getCardData]">Купить</button>
-      <button v-else class="card__add card__add_added"  @click="[deliteProduct(), addProduct(), deliteCard]">
+      <button v-if="!product_data.isLiked" class="card__add" @click="clickButt">Купить</button>
+      <button v-else class="card__add card__add_added" @click="clickButt">
         <img src="../images/add.svg">
         <p class="card__btn-text">В корзине</p>
       </button>
@@ -34,7 +33,6 @@
 <script>
 import CardWindow from './card-window.vue'
 import CardItem from './card-window-img-item.vue'
-import { mapGetters } from 'vuex'
 
 
 export default {
@@ -55,39 +53,23 @@ export default {
   },
   data() {
     return {
-      i: 0,
-      isBtnActive: true,
       isPopupVisible: false,
       carrentSlideIndex: 0,
-      addDataOnCart: []
     }
   },
   components: {
     CardWindow,
     CardItem
   },
-  computed: {
-    deliteCard(){
-      console.log('deliteCard')
-      return this.$store.commit('deliteCard', this.addDataOnCart)
-    },
-    getCardData() {
-      return this.$store.commit('getCardData', this.addDataOnCart)
-    },
-    ...mapGetters(['isButtonAddActive'])
-  },
+  computed: {},
   methods: {
     closePopup() {
       this.isPopupVisible = false;
       this.carrentSlideIndex = 0
     },
-    addProduct() {
-      // console.log('addProduct')
-      return this.addDataOnCart = this.product_data
-    },
-    deliteProduct(){
-      this.i++
-      // console.log(this.i)
+    clickButt(){
+      console.log('click')
+      return this.$store.commit('getCardData', this.product_data)
     },
     prewProduct() {
       this.isPopupVisible = true;

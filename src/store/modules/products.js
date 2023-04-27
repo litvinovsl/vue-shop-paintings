@@ -16,43 +16,29 @@ export default {
       })
     },
     getCardData(state, cartProducts){
-      state.cartProducts.push(cartProducts)
-      state.filteredProducts.forEach(item => {
-        if (item === cartProducts){
-          item.isLiked = true
-        }
-      });
-      console.log('state.KORZINA: ', cartProducts)
+      if (!cartProducts.isLiked) {
+        state.cartProducts.push(cartProducts)
+        state.filteredProducts.forEach(item => {
+          if (item === cartProducts){
+            item.isLiked = true
+          }
+        });
+      } else {
+        state.cartProducts.forEach((item, index, object) => {
+          if (item === cartProducts){
+            object.splice(index, 1);
+          }
+        });
+        state.filteredProducts.forEach((item) => {
+          if (item === cartProducts){
+            item.isLiked = false
+          }
+        });
+      }
     },
-    deliteCard(state, cartProducts){
-      state.cartProducts = state.cartProducts.filter((item) => {
-        // console.log(item)
-        // console.log(item === cartProducts)
-
-        item !== cartProducts
-      } )
-      // state.cartProducts.forEach(item => {
-      //   item === cartProducts ? 
-      // })
-      state.filteredProducts.forEach(item => {
-        if (item === cartProducts){
-          item.isLiked = false
-        }
-      });
-      // console.log('prosto click')
-      // console.log('cartProducts', cartProducts)
-
-    },
-    // deliteCard(){
-    //   console.log('prosto click')
-    // },
-    isButtonAddActiveMut(state){
-      state.isButtonAddActive = !state.isButtonAddActive
-    }
   },
   state() {
     return {
-      isButtonAddActive: true,
       searchText: '1',
       cardWindow: [],
       filteredProducts: [
@@ -185,9 +171,6 @@ export default {
     allCardOnCart(state) {
       return state.cartProducts
     },
-    isButtonAddActive(state){
-      return state.isButtonAddActive
-    }
   }
 
 }
