@@ -1,5 +1,27 @@
+import products from "../../mocks/products"
+
+const loadCards = () => {
+  return new Promise ((resolve) => {
+    setTimeout(() => {
+      resolve(products)
+    }, 1000)
+  })
+}
+
 export default {
-  action: {},
+  action: {
+    async loadCards(){
+      try {
+        const products = await loadCards()
+        console.log(products)
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // consoleLog(w){
+    //   console.log(w)
+    // }
+  },
   mutations: {
     getFilteredText(state, searchText) {
       // console.log(state.searchText)
