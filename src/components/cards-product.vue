@@ -1,7 +1,11 @@
 <template>
-    <section className="elements">
+    <section v-if="isMainPage()" @click="test" className="elements">
         <Card v-for="product in allProducts" :key="product.id" :product_data="product" :carusel_data="product.slider"
             :intervalSlider="10000" />
+    </section>
+    <section v-else className="elements">
+        <Card v-for="product in allCardOnCart" :key="product.id" :product_data="product"
+            :carusel_data="product.slider" :intervalSlider="10000" />
     </section>
 </template>
 
@@ -14,8 +18,19 @@ export default {
     components: {
         Card,
     },
-    computed: mapGetters(['allProducts']),
+    data() {
+        return {}
+    },
+    computed: mapGetters([['allProducts'], ['allCardOnCart']])
+    ,
+
     methods: {
+        isMainPage() {
+            return this.$router.currentRoute._value.path === '/'
+        },
+        test() {
+            // console.log('allCardOnCart: ', this.allCardOnCart)
+        },
     }
 }
 </script>
