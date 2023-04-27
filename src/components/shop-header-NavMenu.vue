@@ -1,10 +1,10 @@
 <template>
     <ul class="header-links">
-        <li class="header-link"><a class="header-link-text" href="#">Каталог</a></li>
-        <li class="header-link"><a class="header-link-text" href="#">Доставка</a></li>
-        <li class="header-link"><a class="header-link-text" href="#">Оплата</a></li>
-        <li class="header-link"><a class="header-link-text" href="#">Контакты</a></li>
-        <li class="header-link"><a class="header-link-text" href="#">О компании</a></li>
+        <li class="header-link" @click="$router.push('/')"><a class="header-link-text" href="#">Каталог</a></li>
+        <li class="header-link" @click="$router.push('delivery')"><a class="header-link-text" href="#">Доставка</a></li>
+        <li class="header-link" @click="$router.push('cart')"><a class="header-link-text" href="#">Корзина</a></li>
+        <li class="header-link" @click="$router.push('contacts')"><a class="header-link-text" href="#">Контакты</a></li>
+        <li class="header-link" @click="$router.push('about')"><a class="header-link-text" href="#">О компании</a></li>
     </ul>
 </template>
 

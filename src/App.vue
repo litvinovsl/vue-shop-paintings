@@ -1,7 +1,9 @@
 <template>
   <div class="app" id="App">
     <Header />
-    <Main />
+    <RouterView />
+    <!-- <Main />
+    <Cart /> -->
     <Footer />
   </div>
 </template>
@@ -9,14 +11,16 @@
 <script>
 
 import Header from './components/shop-header.vue';
-import Main from './components/main-page.vue';
+// import Main from './components/main-page.vue';
+// import Cart from './components/cart-box.vue'
 import Footer from './components/footer-shop.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main,
+    // Main,
+    // Cart,
     Footer
   },
   data() {

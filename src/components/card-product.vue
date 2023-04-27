@@ -7,8 +7,8 @@
         <p v-show="product_data.oldprice" class="card__price card__old-price">{{ product_data.oldprice }} $</p>
         <p class="card__price card__new-price">{{ product_data.newprice }} $</p>
       </div>
-      <button v-if="isBtnActive" class="card__add" @click="addProduct">Купить</button>
-      <button v-else class="card__add card__add_added" @click="addProduct">
+      <button v-if="!product_data.isLiked" class="card__add" @click="clickButt">Купить</button>
+      <button v-else class="card__add card__add_added" @click="clickButt">
         <img src="../images/add.svg">
         <p class="card__btn-text">В корзине</p>
       </button>
@@ -34,6 +34,7 @@
 import CardWindow from './card-window.vue'
 import CardItem from './card-window-img-item.vue'
 
+
 export default {
   name: 'card-product',
   props: {
@@ -52,22 +53,23 @@ export default {
   },
   data() {
     return {
-      isBtnActive: true,
       isPopupVisible: false,
-      carrentSlideIndex: 0
+      carrentSlideIndex: 0,
     }
   },
   components: {
     CardWindow,
     CardItem
   },
+  computed: {},
   methods: {
     closePopup() {
       this.isPopupVisible = false;
       this.carrentSlideIndex = 0
     },
-    addProduct(){
-      this.isBtnActive = !this.isBtnActive
+    clickButt(){
+      console.log('click')
+      return this.$store.commit('getCardData', this.product_data)
     },
     prewProduct() {
       this.isPopupVisible = true;
@@ -183,7 +185,7 @@ export default {
   transition: font-size ease-in-out .3s;
 }
 
-.card__add:hover{
+.card__add:hover {
   font-size: 15px;
 }
 
