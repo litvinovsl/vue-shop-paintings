@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_proj_banki"]=self["webpackChunkvue_proj_banki"]||[]).push([[466],{1466:function(n,o,u){u.r(o),u.d(o,{default:function(){return _}});var a=u(6252);const e={class:"about-box"},t=(0,a._)("h2",{class:"about-box__h"},"О компании",-1),r=[t];function s(n,o,u,t,s,c){return(0,a.wg)(),(0,a.iD)("div",e,r)}var c={name:"about-box",components:{}},b=u(3744);const i=(0,b.Z)(c,[["render",s]]);var _=i}}]);
+//# sourceMappingURL=466.ab35d3c4.js.map

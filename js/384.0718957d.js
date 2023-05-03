@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_proj_banki"]=self["webpackChunkvue_proj_banki"]||[]).push([[384],{6384:function(e,n,r){r.r(n),r.d(n,{default:function(){return l}});var o=r(6252);const s={class:"delivery-box"},u=(0,o._)("h2",{class:"delivery-box__h"},"Доставка",-1),a=[u];function c(e,n,r,u,c,i){return(0,o.wg)(),(0,o.iD)("div",s,a)}var i={name:"delivery-box",components:{}},t=r(3744);const v=(0,t.Z)(i,[["render",c]]);var l=v}}]);
+//# sourceMappingURL=384.0718957d.js.map
