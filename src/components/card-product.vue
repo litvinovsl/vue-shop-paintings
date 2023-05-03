@@ -114,6 +114,11 @@ export default {
   opacity: .5;
 }
 
+.card__img{
+  width: 280px;
+  height: 160px;
+}
+
 .card__title {
   margin-left: 24px;
   margin-bottom: 22px;

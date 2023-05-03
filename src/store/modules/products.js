@@ -14,14 +14,10 @@ export default {
       try {
         const products = await loadCardss(payloud)
         commit('SET_PRODUCTS', products)
-        // console.log(products)
       } catch (error) {
         console.error(error)
       }
     },
-    // consoleLog(w){
-    //   console.log(w)
-    // }
   },
   mutations: {
     SET_PRODUCTS(state, payloud){
