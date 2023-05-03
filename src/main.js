@@ -14,7 +14,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [{
         name: 'Main',
-        path: '',
+        path: '/',
         component: Main
     },{
         name: 'Cart',

@@ -22,7 +22,7 @@ export default {
     ...mapActions(['loadCards'])
   },
   created(){
-    this.loadCards()
+    this.loadCards(2000)
   },
   data() {return {}},
 }
